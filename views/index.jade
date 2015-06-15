@@ -2,4 +2,39 @@ extends layout
 
 block content
   h1= title
-  p Welcome to #{title}
+  p Welcome to #{title}!
+  P Share our website on Twitter
+    a.twitter-share-button(href='https://twitter.com/share', data-via='votesavvy', data-hashtags='votesavvy') Tweet
+    script.
+      !function(d,s,id){
+         var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';
+         if(!d.getElementById(id)){
+           js=d.createElement(s);
+           js.id=id;js.src=p+'://platform.twitter.com/widgets.js';
+           fjs.parentNode.insertBefore(js,fjs);
+         }}(document, 'script', 'twitter-wjs');
+
+  P Follow us on Twitter
+     a.twitter-follow-button(href='https://twitter.com/votesavvy', data-show-count='false') Follow @votesavvy
+     script.
+      !function(d,s,id){
+        var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';
+        if(!d.getElementById(id)){js=d.createElement(s);
+          js.id=id;
+          js.src=p+'://platform.twitter.com/widgets.js';
+          fjs.parentNode.insertBefore(js,fjs);
+        }}(document, 'script', 'twitter-wjs');
+
+  P Mention us on Twitter
+    a.twitter-hashtag-button(href='https://twitter.com/intent/tweet?button_hashtag=votesavvy', data-related='votesavvy') Tweet #{mentioned}
+    script.
+      !function(d,s,id){
+        var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';
+        if(!d.getElementById(id)){js=d.createElement(s);
+          js.id=id;
+          js.src=p+'://platform.twitter.com/widgets.js';
+          fjs.parentNode.insertBefore(js,fjs);
+        }}(document, 'script', 'twitter-wjs');
+
+
+   P Tweet Summary
