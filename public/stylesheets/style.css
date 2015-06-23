@@ -6,3 +6,16 @@ body {
 a {
   color: #00B7FF;
 }
+
+.container {
+  width: 500px;
+  margin: 50px auto;
+  overflow: hidden;
+}
+
+.sidebar {
+  float: right;
+  width: 500px;
+}
+
+
