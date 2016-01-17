@@ -10,9 +10,9 @@ var oauth = require('oauth');
 
 var OAuth2 = oauth.OAuth2;
 
-var twitterConsumerKey = 'i1DJVo1bpMqlyQM7wMpnChE7L';
+var twitterConsumerKey = process.env.twitter_consumerKey;
 
-var twitterConsumerSecret = '9uqEcSwSjHGMHYhcmNc4yKd0VzMzz5hmJl5hTJ98qV53GfQjrc';
+var twitterConsumerSecret =process.env.twitter_consumerSecret;
 
 var accessToken;
 
