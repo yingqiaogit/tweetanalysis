@@ -9,11 +9,11 @@ var router = app.Router();
 //the key of votetweetanalysis in twitter application management
 
 var myConfig = {
-    "consumerKey": "i1DJVo1bpMqlyQM7wMpnChE7L",
-    "consumerSecret": "9uqEcSwSjHGMHYhcmNc4yKd0VzMzz5hmJl5hTJ98qV53GfQjrc",
-    "accessToken": "1169193162-UeNkfKFILysCgCtdwVcicQHcFXYpruTwEGSSqSl",
-    "accessTokenSecret": "ORjMtWDxSMxv20EPdhyrrTdvactY3x0OdRKANLrPkQBnd",
-    "callBackUrl":"http://localhost:3000/signintwitter/step2"
+    "consumerKey": process.env.twitter_consumeKey,
+    "consumerSecret": process.env.twitter_consumerSecret,
+    "accessToken": process.env.twitter_accessToken,
+    "accessTokenSecret": process.env.twitter_accessTokenSecret,
+    "callBackUrl":process.env.twitter_callBackUrl
 };
 
 router.oauthStore={};
